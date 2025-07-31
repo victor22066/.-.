@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jogo de Vestir</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Jogo de Vestir</h1>
+
+    <div class="container">
+        <!-- Closet -->
+        <div class="closet">
+            <img src="imagens/cabelo1.png" draggable="true" ondragstart="drag(event)">
+            <img src="imagens/cabelo2.png" draggable="true" ondragstart="drag(event)">
+            <img src="imagens/roupa1.png" draggable="true" ondragstart="drag(event)">
+            <img src="imagens/roupa2.png" draggable="true" ondragstart="drag(event)">
+            <img src="imagens/sapato1.png" draggable="true" ondragstart="drag(event)">
+        </div>
+
+        <!-- Área da boneca -->
+        <div class="doll-area" id="capture" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="imagens/boneca.png" class="base" alt="Boneca">
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button onclick="resetLook()">Resetar</button>
+        <button onclick="saveLook()">Salvar Look</button>
+    </div>
+
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+</html>
